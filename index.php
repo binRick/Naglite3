@@ -1,35 +1,10 @@
 <?php
-/** 
- *	Naglite3 - Nagios Status Monitor
- *	Inspired by Naglite (http://www.monitoringexchange.org/inventory/Utilities/AddOn-Projects/Frontends/NagLite)
- *	and Naglite2 (http://laur.ie/blog/2010/03/naglite2-finally-released/)
- *
- *	@author		Steffen Zieger <me@saz.sh>
- *	@version	1.6
- *	@license	GPL
- **/
-
-/**
- *
- * Please do not change values below, as this will make it harder
- * for you to update in the future.
- * Rename config.php.example to config.php and change the values there.
- *
- **/
-
-// Set file path to your nagios status log
 $statusFile = '/var/cache/nagios3/status.dat';
-
-// Objects file
 $objectsFile = '/var/cache/icinga/objects.cache';
-
-// Default refresh time in seconds
 $refresh = 10;
-
 // Show warning state if status file was last updated <num> seconds ago
 // Set this to a higher value then status_update_interval in your nagios.cfg
 $statusFileTimeout = 60;
-
 
 $hostFilter = function ($match) { return TRUE; };
 
